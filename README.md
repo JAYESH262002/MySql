@@ -1,11 +1,16 @@
 # MySQL Best Notes
  
-Creating databases in MySQL:- <br>
-The CREATE DATABASE command is used to create a database in MySQL. <br>
+Creating databases in MySQL:-
+
+The CREATE DATABASE command is used to create a database in MySQL.
+
 Syntax-- <br>
+
 CREATE DATABASE <database name>; <br>
-For example:- <br>
-CREATE DATABASE portal_express; <br>
+ 
+For example:-
+ 
+CREATE DATABASE portal_express;
 
 Viewing Databases in MySQL:-
 
