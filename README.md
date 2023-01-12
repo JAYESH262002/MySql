@@ -1,118 +1,104 @@
 # MySql
 
-Creating databases in MySQL:-
-The CREATE DATABASE command is used to create a database in MySQL.
-Syntax--
-CREATE DATABASE <database name>;
-For example:-
-CREATE DATABASE portal_express;
-For Detail Click the Link :-  https://youtu.be/NFwSXi_f_WY
-Viewing Databases in MySQL:-
-If you want to know how many Databases in MySQL then, we need SHOW DATABASES
-command.
-Syntax—
-SHOW DATABASES;
-For example:
-SHOW DATABASES;
-For Detail Click the Link :-  https://youtu.be/NFwSXi_f_WY
-Accessing Database in MySQL:-
-After creating database we need to open it to work in it. We use USE command to access
-database in MySQL.
-Syntax--
-use <database name>
-For example:
-use portal_express ;
-Created by - Path Wala / Computer portal / Portal express
+Creating databases in MySQL:- <br>
+The CREATE DATABASE command is used to create a database in MySQL. <br>
+Syntax-- <br>
+CREATE DATABASE <database name>; <br>
+For example:- <br>
+CREATE DATABASE portal_express; <br>
+For Detail Click the Link :-  https://youtu.be/NFwSXi_f_WY <br>
+Viewing Databases in MySQL:- <br>
+If you want to know how many Databases in MySQL then, we need SHOW DATABASES <br>
+command. <br>
+Syntax— <br>
+SHOW DATABASES; <br>
+For example: <br>
+SHOW DATABASES; <br>
+For Detail Click the Link :-  https://youtu.be/NFwSXi_f_WY <br>
+Accessing Database in MySQL:- <br>
+After creating database we need to open it to work in it. We use USE command to access <br>
+database in MySQL. <br>
+Syntax-- <br>
+use <database name> <br>
+For example: <br>
+use portal_express ; <br>
+Created by - Path Wala / Computer portal / Portal express <br>
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=ROfSrc3AuF8&list=PL2fNQnSKhEooBwL41z5X4SO372jZ
-Oc14P&index=4
-Delete / Remove Database from MySQL:-
-To delete/remove database from MySQL we need DROP command.
-Syntax--
-DROP DATABASE <database name>;
-For example:
-DROP DATABASE portal_express;
-Creating Tables in MySQL:-
-To create table in MySQL database, we need CREATE TABLE statement.
-Syntax--
-create table <table name>
-(<column name > <data type> [<size>] <constraints of you want>,
-<column name > <data type> [<size>] <constraints of you want>,
-<column name > <data type> [<size>] <constraints of you want>                     )
-For example:
-create table student
-(Name varchar(40),
-Roll_no integer,
-Marks integer(10),
-Class integer);
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=dS_8tjhjuj8&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8
-C6cJ&index=5
-Viewing Table of Database:-
-Created by - Path Wala / Computer portal / Portal express
+Delete / Remove Database from MySQL:- <br>
+To delete/remove database from MySQL we need DROP command. <br>
+Syntax-- <br>
+DROP DATABASE <database name>; <br>
+For example: <br>
+DROP DATABASE portal_express; <br>
+Creating Tables in MySQL:- <br>
+To create table in MySQL database, we need CREATE TABLE statement. <br>
+Syntax-- <br>
+create table <table name> <br>
+(<column name > <data type> [<size>] <constraints of you want>, <br>
+<column name > <data type> [<size>] <constraints of you want>, <br>
+<column name > <data type> [<size>] <constraints of you want>) <br>
+For example: <br>
+create table student <br>
+(Name varchar(40), <br>
+Roll_no integer, <br>
+Marks integer(10), <br>
+Class integer); <br>
 
-If you want to see, how many tables has been created in Database, then we need SHOW
-TABLES command.
-Syntax--
-SHOW TABLES;
-For example:
-SHOW TABLES;
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=dS_8tjhjuj8&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8
-C6cJ&index=5
-Inserting Data into Table:-
-INSERT INTO command is use to insert data into a table.
-(A) Inserting data for all the columns into a table:-
+Viewing Table of Database:- <br>
+Created by - Path Wala / Computer portal / Portal express <br>
+
+If you want to see, how many tables has been created in Database, then we need SHOW <br>
+TABLES command. <br>
+Syntax-- <br>
+SHOW TABLES; <br>
+For example: <br>
+SHOW TABLES; <br>
+
+Inserting Data into Table:- <br>
+INSERT INTO command is use to insert data into a table. <br>
+(A) Inserting data for all the columns into a table:- <br>
 ͻ In the first method, it does not specify the column names where the data will be inserted,
-only their values.
+only their values. <br>
 Please make sure that the order of the values is in the same order as the columns represented
-in the structure of the table.
-Syntax--
-INSERT INTO <Table name>
-VALUES (value1 for column1, value2 for column2, value3 for column3, ...);
-For example:
-INSERT INTO student
-VALUES (Ravi, 26, 87, 12);
-ͻ The second method is from specific both the column names and the values to inserted.
-Syntax--
-                                                                                                INSERT INTO <Table name> (column1, column2, column3   )
-VALUES (value1, value2, value3,                                                                 );
-For example:
-INSERT INTO student (Name, Rollno, Marks, Class)
-VALUES (Rajesh, 2, 75, 12);
-Created by - Path Wala / Computer portal / Portal express
+in the structure of the table. <br>
+Syntax-- <br>
+INSERT INTO <Table name> <br>
+VALUES (value1 for column1, value2 for column2, value3 for column3, ...); <br>
+For example: <br>
+INSERT INTO student <br>
+VALUES (Ravi, 26, 87, 12); <br>
+ͻ The second method is from specific both the column names and the values to inserted. <br>
+Syntax-- <br>
+INSERT INTO <Table name> (column1, column2, column3) <br>
+VALUES (value1, value2, value3); <br>
+For example: <br>
+INSERT INTO student (Name, Rollno, Marks, Class) <br>
+VALUES (Rajesh, 2, 75, 12); <br>
+Created by - Path Wala / Computer portal / Portal express <br>
 
-(B) Inserting Data into specific Columns of a Table:-
-If you want to insert value in specific columns then we need following command.
-Syntax--
-INSERT INTO <Table name> (column1, column3, column7                                            )
-VALUES (value1, value3, value7 ...);
-For example:
-INSERT INTO student (Rollno, Class, Name, Marks)
-VALUES (14, 11, Nilay, 81);
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=PjUe634wTSo&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
-G8C6cJ&index=7
-(C) Inserting NULL values into a Table:-
+(B) Inserting Data into specific Columns of a Table:- <br>
+If you want to insert value in specific columns then we need following command. <br>
+Syntax-- <br>
+INSERT INTO <Table name> (column1, column3, column7) <br>
+VALUES (value1, value3, value7 ...); <br>
+For example: <br>
+INSERT INTO student (Rollno, Class, Name, Marks) <br>
+VALUES (14, 11, Nilay, 81); <br>
+
+(C) Inserting NULL values into a Table:- <br>
 To insert value NULL in specific columns, you can type NULL without quotes and NULL will be
-inserted in that column.
-Syntax-
-INSERT INTO <Table name> (column1, column3, column7, column4                                   )
-VALUES (value1, NULL, value7, NULL ...);
-For example:
-INSERT INTO student (Rollno, Class, Name, Marks)
-VALUES (14, 11, Nilay, NULL);
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=3u3CXdlBEGg&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
-G8C6cJ&index=13
-Inserting Dates into table:-
+inserted in that column. <br>
+Syntax- <br>
+INSERT INTO <Table name> (column1, column3, column7, column4) <br>
+VALUES (value1, NULL, value7, NULL ...); <br>
+For example: <br>
+INSERT INTO student (Rollno, Class, Name, Marks) <br>
+VALUES (14, 11, Nilay, NULL); <br>
+
+Inserting Dates into table:- <br>
 Dates are by default entered in 'YYYY-MM-DD' format i.e., first four digits depicting year ,
 followed by a hyphen , followed by 2 digits of month , followed by a hyphen and a two digit
-day. All this is enclosed in single quotes.
-For example:
-‘2020-07-01’
-Created by - Path Wala / Computer portal / Portal express
+day. All this is enclosed in single quotes. <br>
 
 Modifying Data in a Table:-
 (A) Updating multiple Columns:-
