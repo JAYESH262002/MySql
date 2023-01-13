@@ -1,4 +1,4 @@
-
+# MySQL
 ## Creating databases in MySQL:-
 
 The CREATE DATABASE command is used to create a database in MySQL.
@@ -560,371 +560,447 @@ SQL constraints:-
 
 Some common SQL constraints
 
-S.No.                                                                                          Constraint    Description
-1                                                                                              NOT NULL      Ensures that a column cannot have NULL value.
-2                                                                                              DEFAULT       Provides a default value for a column when none is specified.
-3                                                                                              UNIQUE        Ensures that all values in a column are different.
-4                                                                                              CHECK         Makes sure that all values in a column satisfy certain criteria.
-5                                                                                              Primary Key   Used to uniquely identify a row in the table.
-6                                                                                              Foreign Key   Used to ensure referential integrity of the data.
-SQL NOT NULL constraints:-
+|S.No.         |  Constraint    Description                                         |
+| :------------| :------------------------------------------------------------------|
+|1 NOT NULL    |  Ensures that a column cannot have NULL value.                     |
+|2 DEFAULT     |  Provides a default value for a column when none is specified.     |
+|3 UNIQUE      |  Ensures that all values in a column are different.                |
+|4 CHECK       |  Makes sure that all values in a column satisfy certain criteria.  |
+|5 Primary Key |  Used to uniquely identify a row in the table.                     |
+|6 Foreign Key |  Used to ensure referential integrity of the data.                 |
+
+#### SQL NOT NULL constraints:-
+
 By default, a column can hold NULL. If you do not want to allow NULL value in a column, you
 will want to place a constraints on this column specifying that NULL is now not an allowable
 value.
+
 Look the following statement:
-CREATE TABLE customer
-(ID integer NOT NULL, First_name varchar (30) NOT NULL, Last_name varchar (30));
+
+`CREATE TABLE customer (ID integer NOT NULL, First_name varchar (30) NOT NULL, Last_name varchar (30));`
+
 ͻ Column ID & First_name cannot include NULL, while Last_name can include NULL.
-SQL DEFAULT Constraints:-
+
+##### SQL DEFAULT Constraints:-
+
 The DEFAULT constraint provides a default value to a column when the INSERT INTO statement
 does not provide a specific value.
+
 For example, if we create a table as below:
-CREATE TABLE Student
-(Student_ID integer,
-Last_Name varchar (30),
-First_Name varchar (30),
-Score DEFAULT 70);
+
+`CREATE TABLE Student (Student_ID integer, Last_Name varchar (30), First_Name varchar (30), Score DEFAULT 70);`
+
 ͻ And execute the following SQL statement:
-INSERT INTO Student
-(Student ID, Last_Name, First_Name)
-VALUES ('10', 'Kumar', 'Rahul');
+
+`INSERT INTO Student (Student ID, Last_Name, First_Name) VALUES ('10', 'Kumar', 'Rahul');`
+
 After this SQL query, look the table.
 
 Student ID                                                                                           Last_name   First_name   Score
-10                                                                                                   Kumar       Rahul        70
+10
+                                                                                                   Kumar       Rahul        70
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=3BKecpBN3uw&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
-G8C6cJ&index=23
-SQL UNIQUE Constraint:-
+
+
+#### SQL UNIQUE Constraint:-
+
 The UNIQUE constraint ensures that all values in a column are distinct. In other words, no two
 rows can hold the same value for a column with UNIQUE constraint.
+
 For example, in the following CREATE TABLE statement.
-CREATE TABLE Customer
-(ID integer Unique,
-Last_Name varchar (30),
-First_Name varchar (30));
+
+`CREATE TABLE Customer (ID integer Unique, Last_Name varchar (30), First_Name varchar (30));`
+
 Column ID has a unique constraint, and hence cannot include duplicate values. Such constraint
 does not hold for columns Last_Name and First_Name. So, if the table already contains the
 following rows:
-ID                                                                                                   Last_name   First_name
-1                                                                                                    Roa         Ravi
-2                                                                                                    Raj         Shahu
-3                                                                                                    Kumar       Rahul
+
+|ID   | Last_name |  First_name|
+| :---| :---------|------------|
+|1    | Roa       |  Ravi      |
+|2    | Raj       |  Shahu     |
+|3    | Kumar     |  Rahul     |
+
 Executing the following SQL statement:
-INSERT INTO Customer
-VALUES ('3','kumar', 'Rahul');
+
+`INSERT INTO Customer VALUES ('3','kumar', 'Rahul');`
+
 Will result in an error because the value 3 already exists in the ID column, thus trying to insert
 another row with that value violates the UNIQUE constraint.
+
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=l_ilEikox_U&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8
-C6cJ&index=21
 
-SQL CHECK Constraint:-
+#### SQL CHECK Constraint:-
 The CHECK constraint ensures that all values in a column satisfy certain condition. Once
 defined, the database will only insert a new row or update an existing row if the new value
 satisfies the CHECK constraint. The CHECK constraint is used to ensure data quality.
+
 For example, in the following CREATE TABLE statement.
-CREATE TABLE Customer
-(ID integer CHECK (ID > 0),
-Last_Name varchar (30),
-First_Name varchar (30));
+
+`CREATE TABLE Customer (ID integer CHECK (ID > 0), Last_Name varchar (30), First_Name varchar (30));`
+
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=eA1Dl6bohpY&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
-G8C6cJ&index=24
-PRIMARY KEY Constraint:-
+
+#### PRIMARY KEY Constraint:-
 A primary key is used to uniquely identify each row in a table. It can either be part of the actual
 record itself, or it can be an artificial field (one that has nothing to do with the actual record). A
 primary key can consist of one or more fields on a table. When multiple fields are used as a
 primary key, they are called a composite key.
+
 Primary keys can be specified either when the table is created (using CREATE TABLE) or by
 changing the existing table structure (using ALTER TABLE).
+
 Defining Primary Key through Create Table Command
 You can define a primary key in CREATE TABLE command through keywords PRIMARY KEY.
-Below are examples for specifying a primary key when creating a table:
-CREATE TABLE Customer
-(ID integer not null PRIMARY KEY,
-Last_Name varchar (30),
-First_Name varchar (30));
-Or
-CREATE TABLE Customer
-(ID integer not null,
-Last_Name varchar (30),
 
-First_Name varchar (30),
-PRIMARY KEY (ID));
+Below are examples for specifying a primary key when creating a table:
+
+`CREATE TABLE Customer (ID integer not null PRIMARY KEY, Last_Name varchar (30), First_Name varchar (30));`
+
+Or
+
+`CREATE TABLE Customer (ID integer not null, Last_Name varchar (30), First_Name varchar (30), PRIMARY KEY (ID));`
+
 ͻ The latter way is useful if you want to specify a composite primary key (i.e., having a group of
 fields)
+
 For example:-
-CREATE TABLE Customer
-(Branch integer not null,
-ID integer not null,
-Last_Name varchar (30),
-First_Name varchar (30),
-PRIMARY KEY (Branch, ID);
+
+`CREATE TABLE Customer (Branch integer not null, ID integer not null, Last_Name varchar (30), First_Name varchar (30), PRIMARY KEY (Branch, ID);`
+
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=nTF-
-5NL08Ww&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8C6cJ&index=22
-Defining Primary Key through Alter Table Command
+
+##### Defining Primary Key through Alter Table Command
+
 You can define a primary key in ALTER TABLE command through keywords.
-ADD PRIMARY KEY (<key-field>)
+
+`ADD PRIMARY KEY (<key-field>)`
+
 Below are examples for specifying a primary key by altering a table:
-ALTER TABLE Customer
-ADD PRIMARY KEY (ID);
+
+`ALTER TABLE Customer ADD PRIMARY KEY (ID);`
+
 ͻ Before using the   LTER T  BLE command to add a primary key, you'll need to make sure that
 the field is defined as 'NOT NULL', in other words, NULL cannot be an accepted value for that
 field.
+
 Foreign key Constraints:-
+
 Whenever two tables are related by a common column (or set of columns), then the related
 column(s) in the parent table (or primary table) should be either declared a PRIMARY KEY or
 UNIQUE key and the related column(s) in the child table (or related table) should have FOREIGN
 KEY constraint.
+
 For instance, if we have two tables having structures as given below:
+
 Table: CUSTOMER
 
-Column name                                                                                     Characteristic
-SID                                                                                             Primary key
-Last_name
-First_name
-Table: ORDERS
-Column name                                                                                     Characteristic
-Order_ID                                                                                        Primary key
-Order_Date
-Customer_SID                                                                                    Foreign key
-Amount
+|Column name    |        Characteristic |
+| :------------ | :-------------------  |
+|SID            |       Primary key     |
+|Last_name      |                       |
+|First_name     |                       |
+|Table: ORDERS  |                       |
+|Column name    |       Characteristic  |
+|Order_ID       |        Primary key    |
+|Order_Date     |                       |
+|Customer_SID   |        Foreign key    |
+|Amount         |                       |
+
 In the above example, the Customer_SID column in the ORDERS table is a foreign key pointing
 to the SID column in the CUSTOMER table.
+
 Just like primary key, Foreign key can also be created in two ways: through CREATE TABLE and
 ALTER TABLE commands.
+
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=iWUPILYfEuY&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG
 
-Defining Foreign key through Create Table
+#### Defining Foreign key through Create Table
+
 In Create Table command, you can add foreign key's definition through following syntax:
-Foreign Key (<column-to-be-designated-as-foreign-key>) references
-Master-Table (<primary-key-of master-table>);
+
+`Foreign Key (<column-to-be-designated-as-foreign-key>) references Master-Table (<primary-key-of master-table>);`
+
 Following example shows how to specify the foreign key when creating the ORDERS table:
-CREATE TABLE ORDERS
-(Order_ID integer,
-Order_Date date,
-Customer_SID integer,
-Amount double,
-Primary Key (Order ID),
-Foreign Key (Customer_SID) references CUSTOMER (SID));
+
+`CREATE TABLE ORDERS (Order_ID integer, Order_Date date, Customer_SID integer, Amount double, Primary Key (Order ID), Foreign Key (Customer_SID) references CUSTOMER (SID));`
+
 ͻ The above code will designate Customer_SID field of ORDERS table as foreign key referencing
 SID field of CUSTOMER table.
+
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=iWUPILYfEuY&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG
 
 
-Defining Foreign key through Alter Table
+#### Defining Foreign key through Alter Table
+
 In Alter Table command, you can add foreign key's definition through following syntax :
-ALTER TABLE <table-name>
+
+`ALTER TABLE <table-name>
 ADD FOREIGN KEY (<column-to-be-designated-as-foreign-key>)
-references Master-Table(<primary-key-of master-table>) ;
+references Master-Table(<primary-key-of master-table>) ;`
+
 Following example specifies a foreign key by altering a table. This assumes that the ORDERS
 table has been created, and the foreign key has not yet been put in:
-ALTER TABLE ORDERS
-ADD FOREIGN KEY (customer_sid) REFERENCES CUSTOMER (SID);
+
+`ALTER TABLE ORDERS
+ADD FOREIGN KEY (customer_sid) REFERENCES CUSTOMER (SID);`
+
 Sorting in SQL - ORDER BY:
+
 If you want to sort or order the result set, you can use the ORDER BY clause of SQL, SELECT
 statement as per following format:
+
 Syntax:-
-SELECT <comma separated select list> FROM <table>
+
+`SELECT <comma separated select list> FROM <table>
 [WHERE <condition>]
-ORDER BY <fieldname> [ASC | DESC] [, <fieldname> [ASC|DESC],  ...];
+ORDER BY <fieldname> [ASC | DESC] [, <fieldname> [ASC|DESC],  ...];`
+
 ͻ Keywords ASC and DESC denote the order - ASC stands for ascending and the DESC stands for
 descending.
+
 ͻ If you do not specify any order keyword   SC or DESC, then by default ORDER BY clause sorts
 the result set in ascending order.
 For example:
-SELECT * FROM data
+
+`SELECT * FROM data
 ORDER BY marks;
 OR
 SELECT * FROM data
-ORDER BY marks ASC;
+ORDER BY marks ASC;`
+
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=cGYBHqFd8B4&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
 
-Ordering Data on Multiple Columns:-
-
+#### Ordering Data on Multiple Columns:-
 
 To order the result set on multiple columns, you can specify the multiple column names in
 ORDER by clause along with the desired sort order, i.e., as:
-SELECT <comma separated select list> FROM <table>
+
+`SELECT <comma separated select list> FROM <table>
 [WHERE <condition>]
-ORDER BY <fieldname1> [ASC/DESC], [<field name1> [ASC|DESC],                                    ];
+ORDER BY <fieldname1> [ASC/DESC], [<field name1> [ASC|DESC]];`
+
 For example:
+
 The following statement will sort the records firstly on the column name Section and then on
 the basis of descending order of column marks.
-SELECT * FROM data
-ORDER BY section ASC, marks DESC;
+
+`SELECT * FROM data
+ORDER BY section ASC, marks DESC;`
+
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=YZzmFMYDqe0&list=PL2fNQnSKhEoqOFMtu_JppZ6a2V
 
-Ordering Data on the basis of a Mathematical Expression:-
+#### Ordering Data on the basis of a Mathematical Expression:-
+
 The ORDER BY clause allows you to include the mathematical expression to order the result set
 by it.
+
 ͻ Consider the following example statement that arrange the result set on the basis of a
 calculated result:
-SELECT rollno, name, grade, section, marks * 0.35 FROM DATA
+
+`SELECT rollno, name, grade, section, marks * 0.35 FROM DATA
 WHERE marks > 60
-ORDER BY section ASC, marks * 0.35 DESC;
+ORDER BY section ASC, marks * 0.35 DESC;`
+
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=YZzmFMYDqe0&list=PL2fNQnSKhEoqOFMtu_JppZ6a2V
 
-Sorting on Column Alias:-
+#### Sorting on Column Alias:-
 If you want, you can provide a column alias name to the mathematical expression in the select
 list.
+
 For example:
-SELECT rollno, name, grade, section, marks * 0.35 AS term1 FROM DATA
+
+`SELECT rollno, name, grade, section, marks * 0.35 AS term1 FROM DATA
 WHERE marks > 60
-ORDER BY section ASC, term1 DESC;
+ORDER BY section ASC, term1 DESC;`
 
 
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=YZzmFMYDqe0&list=PL2fNQnSKhEoqOFMtu_JppZ6a2V
 
-AGGREGATE FUNCTIONS:-
+#### AGGREGATE FUNCTIONS:-
+
 Till now, we have studied about single-row functions which work on a single value. SQL also
 provides multiple-row functions which work on multiple values. So, we can apply SELECT query
 on a group of records rather than the entire table. Therefore, these functions are called
 Aggregate functions or Group functions.
+
 Many group function accept the following options:
-• DISTINCT: - This option causes a group function to consider only distinct value of the
+
+`• DISTINCT:` - This option causes a group function to consider only distinct value of the
 argument expression.
-• ALL: - This option cause a group function to consider all values including duplicates.
-AVG: -
-This function computes the average of given data.
+
+`• ALL:` - This option cause a group function to consider all values including duplicates.
+
+`AVG:` - This function computes the average of given data.
+
 Syntax--
-AVG ([DISTINCT | ALL] n);
+
+`AVG ([DISTINCT | ALL] n);
 For example:-
-SELECT AVG (sal) 'Average' FROM empl;
+SELECT AVG (sal) 'Average' FROM empl;`
+
+
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=gKqQyMVXkeQ&list=PL2fNQnSKhEoqOFMtu_JppZ6a2V
 
-COUNT:-
-This function counts the number of rows in a given column or expression.
+`COUNT:`- This function counts the number of rows in a given column or expression.
+
 Syntax--
-COUNT ({* [DISTINCT | ALL] expr})
+
+`COUNT ({* [DISTINCT | ALL] expr})`
+
 ͻ Return the number of rows in the query.
+
 ͻ If you specify argument expr, this Function returns rows where expr is not null. You can count
 either all rows, or only distinct values of expr.
+
 ͻ If you specify the asterisk (*), this function returns all rows, including duplicates and null.
+
 For example:
+
 ͻ Count number of records a table empl.
 
-SELECT COUNT (*) "Total"
-FROM empl;
+`SELECT COUNT (*) "Total" FROM empl;`
+
 ͻ Count number of jobs in table emp.
-SELECT COUNT (job) "Job Count"
-FROM empl;
+
+`SELECT COUNT (job) "Job Count" FROM empl;`
+
 ͻ How many distinct jobs are listed in table empl?
-SELECT COUNT (DISTINCT job) "Distinct Jobs"
-FROM empl;
+
+`SELECT COUNT (DISTINCT job) "Distinct Jobs" FROM empl;`
+
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=UT2DrNyFSdI&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG
-MAX:-
-This function returns the maximum value from a given column or expression.
+
+`MAX:`- This function returns the maximum value from a given column or expression.
+
 Syntax--
-MAX ([DISTINCT | ALL] expr)
+
+`MAX ([DISTINCT | ALL] expr)`
+
 ͻ    Returns maximum value of argument expr.
+
 For example:
+
 ͻ Display maximum salary from table empl.
-SELECT MAX (sal) "Maximum Salary"
-FROM empl;
+
+`SELECT MAX (sal) "Maximum Salary" FROM empl;`
+
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=XbqXYb_fnI8&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG
 
-MIN:-
-This function returns the minimum value from a given column or expression.
-Syntax--
-MIN ( [DISTINCT | ALL] expr)
+`MIN:`- This function returns the minimum value from a given column or expression.
 
+Syntax--
+
+`MIN ( [DISTINCT | ALL] expr)`
 
 ͻ    Returns minimum value of expr.
+
 For example:
+
 ͻ Display the Joining date of senior most employee.
-SELECT MIN (hiredate) as "Minimum Hire Date"
-FROM empl;
+
+`SELECT MIN (hiredate) as "Minimum Hire Date" FROM empl;`
+
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=yVqqOK1OVvY&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
 
-SUM:-
-This function returns the sum of values in given column or expression.
+`SUM:`- This function returns the sum of values in given column or expression.
+
 Syntax--
-SUM([DISTINCT | ALL] n)
+
+`SUM([DISTINCT | ALL] n)`
+
 ͻ    Returns sum of values of n.
+
 For example:
+
 ͻ Display total salary of all employees listed in table empl.
-SELECT SUM (sal) as "Total Salary"
-FROM empl;
+
+`SELECT SUM (sal) as "Total Salary" FROM empl;`
+
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=WO6SsDw6NSM&list=PL2fNQnSKhEoqOFMtu_JppZ6a2
 
-GROUPING RESULT - GROUP BY
+#### GROUPING RESULT - GROUP BY
 The GROUP BY clause combines all those records that have identical values in a particular field
 or a group of fields.
-For example:
-SELECT job, count (*)
-FROM empl
-GROUP BY job;
 
+For example:
+
+`SELECT job, count (*) FROM empl GROUP BY job;`
 
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=5ag0dfsM7sU&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
 
-Nested Group - Grouping on Multiple Column --
+`Nested Group` - Grouping on Multiple Column --
+
 With Group By clause, you can create groups within groups. Such type of grouping is called
 Nested grouping.
+
 This can be done by specifying in GROUP BY expression, where the first field determines the
 highest group level, the second field determines the second group level, and so on. The last
 field determines the lowest level of grouping.
+
 For example:
-SELECT Deptno, job, count (empno)
-FROM empl
-GROUP BY Deptno, job;
+
+`SELECT Deptno, job, count (empno) FROM empl GROUP BY Deptno, job;`
+
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=5ag0dfsM7sU&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
 
-Placing Condition on Groups - HAVING Clause
+#### Placing Condition on Groups - HAVING Clause
 The HAVING clause place conditions on groups in contrast to WHERE clause that places
 conditions on individual rows. While WHERE conditions can not include aggregate functions,
 HAVING condition can do so.
+
 For example:
+
 To calculate the average gross and total gross for employees belonging to ‘E4’grade.
-SELECT AVG(gross) , SUM(gross)
-FROM employee
-GROUP BY grade
-H VING grade = ‘E4’
+
+`SELECT AVG(gross) , SUM(gross) FROM employee GROUP BY grade HAVING grade = ‘E4’`
 
 
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=ZJivWDXxnEo&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8C6cJ&i
 
-SQL JOINS -
-SQL join is a query that combines rows from two or more table .
+`SQL JOINS` - SQL join is a query that combines rows from two or more table .
+
 Syntax -
-Select <field list>
-From <table1х,<table 2х,͙͙
-Where <join condition for the tables >
-;
+
+`Select <field list> From <table1х,<table 2х,͙͙ Where <join condition for the tables >;`
+
 Example -
-Select ENAME , LOC
-From EMPL , DEPT
-Where EN ME = “ noop”
-And EMPL.DEPTNO = DEPT.DEPTNO
-;
-Types of SQL joins  -
-(i)  Cartesian Product :-
+
+Select ENAME , LOC From EMPL , DEPT Where EN ME = “ noop” And EMPL.DEPTNO = DEPT.DEPTNO ;
+
+#### Types of SQL joins  -
+
+(i)  `Cartesian Product :`-
+
 SQL join query without any join condition return all the records of joined with all records of
 other table .
+
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=y6P8vaZ2Kbc&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG
 
 Syntax -
-Select * from <table 1х,<table 2х͙..
-;
-(ii) Equi  Join :-
+
+`Select * from <table 1х,<table 2х͙;`
+
+(ii) `Equi  Join :`-
 SQL join query that join two or more tables based on a condition using equality operator.
 Syntax -
 Select * from <table 1>,<table 2>
@@ -932,47 +1008,48 @@ Where < column of table 1 > = < column of table 2 >
 ;
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=azARiP3sQaY&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG
-8C6cJ&index=30
-(iii) Inner join :-
+
+(iii) `Inner join :`-
+
 An inner join implement an equi join . In this join , only those rows are returned from both
 the table that satisfy the join condition .
+
 Syntax -
-Select <field list>
-From <table1> inner join <table 2>
-On  <join condition for the tables >
-;
+
+`Select <field list> From <table1> inner join <table 2> On  <join condition for the tables >;`
+
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=JaPaZzII7z8&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8
 
-(iv) Natural Join :-
-The join in which only one of the identical column exits.
+(iv) `Natural Join :`- The join in which only one of the identical column exits.
+
 Syntax -
-Select *
-From < table 1 > Natural join < table 2 >
-;
+
+`Select * From < table 1 > Natural join < table 2 > ;`
+
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=y6P8vaZ2Kbc&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG
 
-(v)  Left join:-
-The Left join is a particular type of join that selects rows from both left and right tables that
+(v)  `Left join:`- The Left join is a particular type of join that selects rows from both left and right tables that
 are matched , plus all rows from left table even with no matching rows found in right table .
+
 Syntax -
-Select <field list>
+
+`Select <field list>
 From <table1>  Left Join <table 2>
-On  <join condition for the tables >
-;
+On  <join condition for the tables >;`
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=JaPaZzII7z8&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8
 
-(v)  Right Join:-
-The Right join is a particular type of join that selects rows from both left and right tables that
+(v)  `Right Join:`-The Right join is a particular type of join that selects rows from both left and right tables that
 are matched , plus all rows from right table even with no matching rows found in left table .
+
 Syntax -
-Select <field list>
 
-
+`Select <field list>
 From <table1>  Right Join <table 2>
-On  <join condition for the tables >;
+On  <join condition for the tables >;`
+
 For Detail Click the Link :-
 https://www.youtube.com/watch?v=JaPaZzII7z8&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8
 
