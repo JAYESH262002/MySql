@@ -11,7 +11,6 @@ For example:-
 
 CREATE DATABASE portal_express;
 
-For Detail Click the Link :-  https://youtu.be/NFwSXi_f_WY
 
 ## Viewing Databases in MySQL:-
 
@@ -25,8 +24,6 @@ For example:
 
 SHOW DATABASES;
 
-For Detail Click the Link :-  https://youtu.be/NFwSXi_f_WY
-
 ### Accessing Database in MySQL:-
 
 After creating database we need to open it to work in it. We use USE command to access
@@ -39,9 +36,6 @@ Syntax--
 For example:
 
 use portal_express ;
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=ROfSrc3AuF8&list=PL2fNQnSKhEooBwL41z5X4SO372jZ
 
 ### Delete / Remove Database from MySQL:-
 To delete/remove database from MySQL we need DROP command.
@@ -66,10 +60,6 @@ For example:
 
 create table student (Name varchar(40), Roll_no integer, Marks integer(10), Class integer);
 
-For Detail Click the Link :-
-
-https://www.youtube.com/watch?v=dS_8tjhjuj8&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8
-
 ### Viewing Table of Database:-
 
 If you want to see, how many tables has been created in Database, then we need SHOW
@@ -82,9 +72,6 @@ Syntax--
 For example:
 
 SHOW TABLES;
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=dS_8tjhjuj8&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8
 
 ### Inserting Data into Table:-
 
@@ -128,9 +115,6 @@ For example:
 
 INSERT INTO student (Rollno, Class, Name, Marks) VALUES (14, 11, Nilay, 81);
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=PjUe634wTSo&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
-
 #### (C) Inserting NULL values into a Table:-
 To insert value NULL in specific columns, you can type NULL without quotes and NULL will be
 inserted in that column.
@@ -141,10 +125,6 @@ Syntax-
 For example:
 
 INSERT INTO student (Rollno, Class, Name, Marks) VALUES (14, 11, Nilay, NULL);
-
-For Detail Click the Link :-
-
-https://www.youtube.com/watch?v=3u3CXdlBEGg&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
 
 ### Inserting Dates into table:-
 Dates are by default entered in 'YYYY-MM-DD' format i.e., first four digits depicting year ,
@@ -168,9 +148,6 @@ For example:
 
 UPDATE student SET Class=12, Marks=71 WHERE Name= ‘Rajesh’͖
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=5Q1DT03jmeQ&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
-
 #### (B) Updating Single Value:-
 Syntax--
 
@@ -180,10 +157,6 @@ For example:
 
 UPDATE student SET Class=11 WHERE Name= ‘Ravi’͖
 
-For Detail Click the Link :-
-
-https://www.youtube.com/watch?v=5Q1DT03jmeQ&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
-
 #### (C) Updating using an expression or formula:-
 Like that: --
 
@@ -192,9 +165,6 @@ Like that: --
 For example:
 
 UPDATE student SET Marks=Marks + 5 WHERE Name= ‘Rajesh’͖
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=Hc9Hn6Z6zhM&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8C6cJ&
 
 ### Removing Data from a Table:-
 ͻ The DELETE statement is used to delete rows from a table.
@@ -206,9 +176,6 @@ Syntax--
 For example:
 
 DELETE FROM student WHERE Name= ‘Rajesh’;
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=m7OO6fyDp74&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
 
 ### • Truncate Statement: -
 The MySQL TRUNCATE command is used to delete all the rows from Table and free the space
@@ -253,9 +220,6 @@ For example:
 
 ALTER TABLE student ADD (School char(50));
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=_prNB43dlIA&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG
-
 #### (B) Adding a Column with default value: -
 Alter table command can be used to add a new column to an existing Table with default values.
 
@@ -266,9 +230,6 @@ Syntax--
 For example:
 
 ALTER TABLE student   DD (School char(50) default “K.V”)͖
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=_prNB43dlIA&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG
 
 #### (C) Modifying an existing Column definition:-
 The MODIFY clause can be used with ALTER TABLE command to change the datatype, size
@@ -282,10 +243,6 @@ For example:
 
 ALTER TABLE student MODIFY (Name char(100));
 
-For Detail Click the Link :-
-
-https://www.youtube.com/watch?v=_prNB43dlIA&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG
-
 #### (D) Renaming a Column:-
 
 Syntax---
@@ -295,10 +252,6 @@ Syntax---
 For example:
 
 ALTER TABLE student CHANGE school school_name char(60);
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=8A7bAP1GAKI&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
-
 
 #### (E) Removing a Column:-
 
@@ -311,10 +264,6 @@ For example:
 
 ALTER TABLE student DROP school_name;
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=3a3mQtmUmfE&list=PL2fNQnSKhEoqOFMtu_JppZ6a2V
-
-
 ### Viewing Structure of a Table:-
 If you want to know the structure of a table, you can use DESCRIBE or DESC command as per
 following syntax--
@@ -324,9 +273,6 @@ following syntax--
 For example:
 
 DESC student;
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=dS_8tjhjuj8&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8C6cJ&ind
 
 #### DROP TABLE command:-
 Sometimes, we may need to physically remove a table which is not in use. DROP TABLE
@@ -342,18 +288,12 @@ For example:
 
 DROP TABLE student;
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=X7921fwn69s&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
-
 ### MAKING SIMPLE QUERIES THROUGH SELECT COMMAND
 The SELECT command can perform selection as well as projection. It is most extensively used
 MySQL command. The general form of the statement is:-
 
 `SELECT what to select FROM which table WHERE condition to satisfy;`
 
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=3a3mQtmUmfE&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8C6cJ
 
 Before going forward Consider the following table or look the table carefully:-
 
@@ -409,9 +349,6 @@ Selecting Particular Columns:-
 
 `SELECT owner FROM pet WHERE birth = '2017-12-31’͖`
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=3a3mQtmUmfE&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8C6cJ
-
 #### Eliminating Redundant Data (with keyword DISTINCT):-
 
 1 = Display names of all pets owner (non Redundant).
@@ -421,10 +358,6 @@ https://www.youtube.com/watch?v=3a3mQtmUmfE&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8C
 2 = Display distinct species of pets from table pet.
 
 `SELECT DISTINCT (species) FROM pet ;`
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=TnH3fzMs-
-dc&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8C6cJ&index=11
 
 #### Select From All the Rows - ALL Keyword:-
 ͻ It will give values of name column from every row of the table without considering the
@@ -445,11 +378,6 @@ keyword SELECT, e.g.
 
 `SELECT curdate() ;`
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=C5IgVYfPWKQ&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
-
-
-
 #### Using Column Aliases:-
 
 The columns that you select in a query can be given a different name i.e., column alias name for
@@ -460,9 +388,6 @@ output purposes. As per following syntax
 For example:
 
 SELECT name , species AS "Type of animals" FROM pet ;
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=bICen8QoiVI&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG
 
 #### Condition Based on a Range:-
 
@@ -504,15 +429,9 @@ For Examples:
 1 = To list pet in which owner name starting with 'A', then command is:
 `SELECT name, owner, city FROM pet WHERE owner LIKE 'A%’͖`
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=UqESEa1HRv4&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
-
 2 = To list names of pets who have names ending with 'y', the command would be:
 
 `SELECT name FROM pet WHERE name LIKE '%y’͖`
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=UqESEa1HRv4&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
 
 #### Searching for NULL:-
 
@@ -526,9 +445,6 @@ To list details of all pets whose date of birth contain NULL (i.e., novalue), th
 command:
 
 `SELECT name, owner, city FROM pet WHERE birth IS NULL;`
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=3u3CXdlBEGg&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
 
 ͻ Non-NULL values in a table can be listed using IS NOT NULL.
 
@@ -546,9 +462,6 @@ following example:
 It will extract all those rows from branch2 that have gross more than 7000.00 and insert this
 produced result into the table branch1. But for above command to work, table namely branch1
 must be an existing table of the database.
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=roLkW_T5rQE&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
 
 #### CREATING TABLES WITH SQL CONSTRAINTS:-
 You already know that a table is created using CREATE TABLE command. But while creating
@@ -599,9 +512,6 @@ After this SQL query, look the table.
 Student ID                                                                                           Last_name   First_name   Score
 10
                                                                                                    Kumar       Rahul        70
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=3BKecpBN3uw&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
-
 
 #### SQL UNIQUE Constraint:-
 
@@ -629,9 +539,6 @@ Executing the following SQL statement:
 Will result in an error because the value 3 already exists in the ID column, thus trying to insert
 another row with that value violates the UNIQUE constraint.
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=l_ilEikox_U&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8
-
 #### SQL CHECK Constraint:-
 The CHECK constraint ensures that all values in a column satisfy certain condition. Once
 defined, the database will only insert a new row or update an existing row if the new value
@@ -640,9 +547,6 @@ satisfies the CHECK constraint. The CHECK constraint is used to ensure data qual
 For example, in the following CREATE TABLE statement.
 
 `CREATE TABLE Customer (ID integer CHECK (ID > 0), Last_Name varchar (30), First_Name varchar (30));`
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=eA1Dl6bohpY&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
 
 #### PRIMARY KEY Constraint:-
 A primary key is used to uniquely identify each row in a table. It can either be part of the actual
@@ -670,9 +574,6 @@ fields)
 For example:-
 
 `CREATE TABLE Customer (Branch integer not null, ID integer not null, Last_Name varchar (30), First_Name varchar (30), PRIMARY KEY (Branch, ID);`
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=nTF-
 
 ##### Defining Primary Key through Alter Table Command
 
@@ -717,9 +618,6 @@ to the SID column in the CUSTOMER table.
 Just like primary key, Foreign key can also be created in two ways: through CREATE TABLE and
 ALTER TABLE commands.
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=iWUPILYfEuY&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG
-
 #### Defining Foreign key through Create Table
 
 In Create Table command, you can add foreign key's definition through following syntax:
@@ -732,10 +630,6 @@ Following example shows how to specify the foreign key when creating the ORDERS 
 
 ͻ The above code will designate Customer_SID field of ORDERS table as foreign key referencing
 SID field of CUSTOMER table.
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=iWUPILYfEuY&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG
-
 
 #### Defining Foreign key through Alter Table
 
@@ -775,9 +669,6 @@ OR
 SELECT * FROM data
 ORDER BY marks ASC;`
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=cGYBHqFd8B4&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
-
 #### Ordering Data on Multiple Columns:-
 
 To order the result set on multiple columns, you can specify the multiple column names in
@@ -795,9 +686,6 @@ the basis of descending order of column marks.
 `SELECT * FROM data
 ORDER BY section ASC, marks DESC;`
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=YZzmFMYDqe0&list=PL2fNQnSKhEoqOFMtu_JppZ6a2V
-
 #### Ordering Data on the basis of a Mathematical Expression:-
 
 The ORDER BY clause allows you to include the mathematical expression to order the result set
@@ -810,9 +698,6 @@ calculated result:
 WHERE marks > 60
 ORDER BY section ASC, marks * 0.35 DESC;`
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=YZzmFMYDqe0&list=PL2fNQnSKhEoqOFMtu_JppZ6a2V
-
 #### Sorting on Column Alias:-
 If you want, you can provide a column alias name to the mathematical expression in the select
 list.
@@ -822,10 +707,6 @@ For example:
 `SELECT rollno, name, grade, section, marks * 0.35 AS term1 FROM DATA
 WHERE marks > 60
 ORDER BY section ASC, term1 DESC;`
-
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=YZzmFMYDqe0&list=PL2fNQnSKhEoqOFMtu_JppZ6a2V
 
 #### AGGREGATE FUNCTIONS:-
 
@@ -848,10 +729,6 @@ Syntax--
 `AVG ([DISTINCT | ALL] n);
 For example:-
 SELECT AVG (sal) 'Average' FROM empl;`
-
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=gKqQyMVXkeQ&list=PL2fNQnSKhEoqOFMtu_JppZ6a2V
 
 `COUNT:`- This function counts the number of rows in a given column or expression.
 
@@ -880,9 +757,6 @@ For example:
 
 `SELECT COUNT (DISTINCT job) "Distinct Jobs" FROM empl;`
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=UT2DrNyFSdI&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG
-
 `MAX:`- This function returns the maximum value from a given column or expression.
 
 Syntax--
@@ -896,9 +770,6 @@ For example:
 ͻ Display maximum salary from table empl.
 
 `SELECT MAX (sal) "Maximum Salary" FROM empl;`
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=XbqXYb_fnI8&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG
 
 `MIN:`- This function returns the minimum value from a given column or expression.
 
@@ -914,9 +785,6 @@ For example:
 
 `SELECT MIN (hiredate) as "Minimum Hire Date" FROM empl;`
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=yVqqOK1OVvY&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
-
 `SUM:`- This function returns the sum of values in given column or expression.
 
 Syntax--
@@ -931,9 +799,6 @@ For example:
 
 `SELECT SUM (sal) as "Total Salary" FROM empl;`
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=WO6SsDw6NSM&list=PL2fNQnSKhEoqOFMtu_JppZ6a2
-
 #### GROUPING RESULT - GROUP BY
 The GROUP BY clause combines all those records that have identical values in a particular field
 or a group of fields.
@@ -941,9 +806,6 @@ or a group of fields.
 For example:
 
 `SELECT job, count (*) FROM empl GROUP BY job;`
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=5ag0dfsM7sU&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
 
 `Nested Group` - Grouping on Multiple Column --
 
@@ -958,8 +820,6 @@ For example:
 
 `SELECT Deptno, job, count (empno) FROM empl GROUP BY Deptno, job;`
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=5ag0dfsM7sU&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VC
 
 #### Placing Condition on Groups - HAVING Clause
 The HAVING clause place conditions on groups in contrast to WHERE clause that places
@@ -971,10 +831,6 @@ For example:
 To calculate the average gross and total gross for employees belonging to ‘E4’grade.
 
 `SELECT AVG(gross) , SUM(gross) FROM employee GROUP BY grade HAVING grade = ‘E4’`
-
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=ZJivWDXxnEo&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8C6cJ&i
 
 `SQL JOINS` - SQL join is a query that combines rows from two or more table .
 
@@ -993,9 +849,6 @@ Select ENAME , LOC From EMPL , DEPT Where EN ME = “ noop” And EMPL.DEPTNO = 
 SQL join query without any join condition return all the records of joined with all records of
 other table .
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=y6P8vaZ2Kbc&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG
-
 Syntax -
 
 `Select * from <table 1х,<table 2х͙;`
@@ -1006,8 +859,6 @@ Syntax -
 Select * from <table 1>,<table 2>
 Where < column of table 1 > = < column of table 2 >
 ;
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=azARiP3sQaY&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG
 
 (iii) `Inner join :`-
 
@@ -1018,17 +869,11 @@ Syntax -
 
 `Select <field list> From <table1> inner join <table 2> On  <join condition for the tables >;`
 
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=JaPaZzII7z8&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8
-
 (iv) `Natural Join :`- The join in which only one of the identical column exits.
 
 Syntax -
 
 `Select * From < table 1 > Natural join < table 2 > ;`
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=y6P8vaZ2Kbc&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG
 
 (v)  `Left join:`- The Left join is a particular type of join that selects rows from both left and right tables that
 are matched , plus all rows from left table even with no matching rows found in right table .
@@ -1038,8 +883,6 @@ Syntax -
 `Select <field list>
 From <table1>  Left Join <table 2>
 On  <join condition for the tables >;`
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=JaPaZzII7z8&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8
 
 (v)  `Right Join:`-The Right join is a particular type of join that selects rows from both left and right tables that
 are matched , plus all rows from right table even with no matching rows found in left table .
@@ -1049,8 +892,3 @@ Syntax -
 `Select <field list>
 From <table1>  Right Join <table 2>
 On  <join condition for the tables >;`
-
-For Detail Click the Link :-
-https://www.youtube.com/watch?v=JaPaZzII7z8&list=PL2fNQnSKhEoqOFMtu_JppZ6a2VCG8
-
-
