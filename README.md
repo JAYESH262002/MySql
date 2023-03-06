@@ -12,7 +12,6 @@ For example:-
 
 CREATE DATABASE portal_express;
 
-
 ## Viewing Databases in MySQL:-
 
 If you want to know how many Databases in MySQL then, we need SHOW DATABASES command.
