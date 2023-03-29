@@ -1,6 +1,6 @@
 # MySQL
 
-## Creating databases in MySQL:-
+## Creating databases in MySQL :-
 
 The CREATE DATABASE command is used to create a database in MySQL.
 
